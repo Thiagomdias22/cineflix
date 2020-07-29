@@ -22,7 +22,7 @@ function CadastroCategoria() {
             </form>
 
             <Link to="/">
-                Ir para home
+                Ir para home.
             </Link>
         </PageDefault>
     );
