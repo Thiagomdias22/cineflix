@@ -35,7 +35,7 @@ Label.Text = styled.span`
 const Input = styled.input`
   background: #53585D;
   color: #F5F5F5;
-  display: block;
+  display: block ;
   width: 100%;
   height: 57px;
   font-size: 18px;
