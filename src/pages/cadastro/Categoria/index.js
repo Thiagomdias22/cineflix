@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
+import Button from '../../../components/Button';
 
 function CadastroCategoria() {
   const valoresIniciais = {
@@ -31,7 +32,7 @@ function CadastroCategoria() {
 
   useEffect(() => {
     if (window.location.href.includes('localhost')) {
-      const URL = 'http://localhost:8080/categorias';
+      const URL = 'https://cineflixdev.herokuapp.com/categorias';
       fetch(URL)
         .then(async (respostaDoServer) => {
           if (respostaDoServer.ok) {
@@ -87,9 +88,9 @@ function CadastroCategoria() {
           onChange={handleChange}
         />
 
-        <button>
+        <Button>
           Cadastrar
-        </button>
+        </Button>
       </form>
 
       {categorias.length === 0 && (
@@ -97,7 +98,7 @@ function CadastroCategoria() {
         Loading...
       </div>
       )}
- 
+
       <ul>
         {categorias.map((categoria, indice) => (
           <li key={`${categoria}${indice}`}>
